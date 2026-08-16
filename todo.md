@@ -92,3 +92,10 @@
 - [x] Create a new private GitHub repository and push the finalized project code.
 - [x] Save and confirm the final checkpoint for publish readiness.
 - [x] Provide the GitHub repository URL, checkpoint version, and Management UI publish instructions.
+
+## GitHub Pages 404 Remediation
+
+- [ ] Inspect GitHub Pages source, workflow configuration, and repository build artifacts.
+- [ ] Implement the smallest compatible fix for the Pages deployment and SPA fallback/base path.
+- [ ] Push the fix and verify the live GitHub Pages URL returns the portal instead of 404.
+- [ ] Save a corrected checkpoint and report the verified deployment URL.
