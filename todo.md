@@ -74,7 +74,14 @@
 - [x] Save and confirm a new post-Phase-7 checkpoint after the report and findings are complete.
 - [x] Perform and document a true per-question Phase 7 retest for all 15 questions, recording the actual live navigation path, live search query/results, and AI path result or explicit access blocker.
 - [x] If AI remains sign-in gated, document that blocker per question and explicitly narrow the Phase 7 AI retest scope in the report.
-- [ ] Save a new post-Phase-7 checkpoint after the finalized report and walkthrough artifacts are complete, then confirm the new checkpoint identifier/version.
+- [x] Save a new post-Phase-7 checkpoint after the finalized report and walkthrough artifacts are complete, then confirm the new checkpoint identifier/version.
 
 - [x] Add a compact evidence row for each of the 15 questions with route used, exact live search query, result count, top visible results, answer/failure outcome, and the per-question AI access blocker.
 
+
+## Phase 8 — Production Readiness
+
+- [x] Perform the final functional, data, AI, security, performance, and UX readiness audit.
+- [x] Verify deployment, backup, knowledge-base update, document replacement/versioning, and AI/RAG maintenance procedures.
+- [x] Produce the production-readiness score, critical issues, technical debt register, administrator guide, and new-personnel user guide.
+- [x] Run final Phase 8 validation and save a confirmed production-readiness checkpoint.
