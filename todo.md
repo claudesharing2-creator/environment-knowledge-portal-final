@@ -59,3 +59,22 @@
 - [x] Perform and document an exhaustive page-by-page claim audit for every routed surface, each FAQ item, and all handover UI claims with evidence references.
 - [x] Save and confirm a new checkpoint after the Phase 6 citation, UI, and test changes.
 - [x] Save and confirm the post-Phase-6 checkpoint after the citation, UI, test, and audit-report changes.
+
+## Phase 7 — New Personnel Simulation
+
+- [x] Simulate a new Environment personnel user using only visible portal content and seeded knowledge.
+- [x] Test all fifteen onboarding and operational questions through navigation, search, and AI paths.
+- [x] Evaluate discoverability, navigation, terminology, readability, hierarchy, citations, task guidance, AI, and onboarding.
+- [x] Identify technical pages, unexplained acronyms, missing context, dead ends, duplicates, unclear procedures, and missing sources.
+- [x] Score onboarding, coverage, search, task guidance, traceability, AI reliability, usability, visual clarity, and maintainability.
+- [x] Produce prioritized CRITICAL, HIGH, MEDIUM, and LOW improvements.
+- [x] Save the Phase 7 simulation report and update the project checkpoint after all findings are recorded.
+- [x] Perform a true UI-driven Phase 7 walkthrough using the live portal routes only, without direct procedure calls, and document findings per page and question.
+- [x] Retest all fifteen onboarding questions with explicit navigation, search, and AI path coverage and record the best path for each.
+- [x] Save and confirm a new post-Phase-7 checkpoint after the report and findings are complete.
+- [x] Perform and document a true per-question Phase 7 retest for all 15 questions, recording the actual live navigation path, live search query/results, and AI path result or explicit access blocker.
+- [x] If AI remains sign-in gated, document that blocker per question and explicitly narrow the Phase 7 AI retest scope in the report.
+- [ ] Save a new post-Phase-7 checkpoint after the finalized report and walkthrough artifacts are complete, then confirm the new checkpoint identifier/version.
+
+- [x] Add a compact evidence row for each of the 15 questions with route used, exact live search query, result count, top visible results, answer/failure outcome, and the per-question AI access blocker.
+
