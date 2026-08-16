@@ -190,3 +190,10 @@
 - [x] Uji akses baca-saja dan responsif pada seluruh rute publik
 - [x] Push perubahan final dan verifikasi URL GitHub Pages
 - [x] Simpan checkpoint final setelah perubahan teruji
+
+## Bug Follow-up — 404 pada Navigasi Pilih Aspek
+
+- [ ] Reproduksi 404 saat tombol “Pilih aspek”/“Mulai belajar” dibuka dari GitHub Pages
+- [ ] Perbaiki fallback SPA dan routing materi aspek pada host project Pages
+- [ ] Uji langsung Beranda → `/learn/D01` pada URL Pages, termasuk tombol dan mobile
+- [ ] Push perbaikan dan simpan checkpoint baru setelah URL terverifikasi
