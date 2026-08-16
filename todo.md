@@ -197,3 +197,11 @@
 - [x] Perbaiki fallback SPA dan routing materi aspek pada host project Pages
 - [x] Uji langsung Beranda → `/learn/D01` pada URL Pages, termasuk tombol dan mobile
 - [x] Push perbaikan dan simpan checkpoint baru setelah URL terverifikasi
+
+## Bug Follow-up — Materi Aspek Tidak Tersedia
+
+- [ ] Reproduksi pesan “Materi aspek tidak tersedia” pada URL GitHub Pages dan preview
+- [ ] Audit ID domain D01–D11 terhadap data sumber ZIP yang dibundel
+- [ ] Perbaiki pemetaan atau fallback materi agar seluruh aspek dapat dibaca langsung
+- [ ] Uji seluruh URL materi aspek D01–D11 dan tombol Beranda
+- [ ] Push perbaikan dan simpan checkpoint baru

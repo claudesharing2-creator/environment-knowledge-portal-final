@@ -18,6 +18,7 @@ const fields: Record<PortalType, string[]> = {
 };
 
 function idOf(item: RawRecord) { return String(item.document_id ?? item.domain_id ?? item.site_group_id ?? item.monitoring_id ?? item.workflow_id ?? item.task_id ?? item.role_id ?? item.site_id ?? item.regulation_id ?? item.parameter_id ?? item.glossary_id ?? item.gap_id ?? item.conflict_id ?? ""); }
+function normalizeId(value: string) { return String(value ?? "").trim().toUpperCase(); }
 function titleOf(type: PortalType, item: RawRecord) { return fields[type].map(field => item[field]).find(Boolean)?.toString() ?? "Catatan tanpa judul"; }
 function statusOf(type: PortalType, item: RawRecord) { if (type === "conflict") return "CONFLICTING"; if (type === "gap") return "REQUIRES_HUMAN_REVIEW"; return String(item.status ?? item.confirmation_status ?? item.currency_status ?? "SOURCE_SUPPORTED").split(" — ")[0]; }
 function refsOf(item: RawRecord) {
@@ -29,7 +30,7 @@ function card(type: PortalType, item: RawRecord): PortalCard { return { id: idOf
 function flatten(value: unknown): string { if (value === null || value === undefined) return ""; if (Array.isArray(value)) return value.map(flatten).join(" "); if (typeof value === "object") return Object.values(value as RawRecord).map(flatten).join(" "); return String(value); }
 
 export function listStatic(type: PortalType, limit = 60) { return (collections[type] ?? []).slice(0, limit).map(item => card(type, item)); }
-export function getStatic(type: PortalType, id: string) { const item = collections[type]?.find(candidate => idOf(candidate) === id); return item ? card(type, item) : null; }
+export function getStatic(type: PortalType, id: string) { const target = normalizeId(id); const item = collections[type]?.find(candidate => normalizeId(idOf(candidate)) === target); return item ? card(type, item) : null; }
 export function searchStatic(query: string, type?: PortalType, status?: string, limit = 30) {
   const terms = query.toLowerCase().split(/\s+/).filter(term => term.length > 2);
   const kinds = type ? [type] : (Object.keys(collections) as PortalType[]);
