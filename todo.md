@@ -161,3 +161,17 @@
 - [x] Surface related glossary terms on each in-app learning aspect page using audited glossary records or an explicit empty state when no relationship is source-stated.
 - [x] Simplify the global navigation so learning aspects are the primary path and Search, AI, evidence, and Handover are clearly secondary support tools.
 - [x] Save and record a new checkpoint after these Phase 10 corrections are validated.
+
+## Final Indonesian Accessibility and Repository Delivery
+
+- [ ] Audit every primary route, button, link, evidence action, search action, AI action, learning action, and back-navigation path.
+- [ ] Complete the Indonesian UI sweep and remove remaining prominent English interface labels without translating source-derived evidence incorrectly.
+- [ ] Fix every interaction, routing, loading, empty-state, or mobile issue found during the audit.
+- [ ] Run the complete regression suite, TypeScript validation, build/runtime checks, and visual verification before delivery.
+- [ ] Push the final validated code to the user's GitHub repository and verify the remote branch state.
+- [ ] Save a final checkpoint and report only verified access and repository details.
+
+- [ ] Final Indonesian sweep: translate dynamic status, metadata, error, and accessibility labels found during live route audit
+- [ ] Re-run regression tests, TypeScript check, build, and primary click-path verification after final localization fixes
+- [ ] Push the validated final commit to the private GitHub repository
+- [ ] Save and deliver the final published checkpoint
