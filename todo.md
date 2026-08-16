@@ -58,4 +58,4 @@
 - [x] Save a new checkpoint after all Phase 6 corrections and coverage updates.
 - [x] Perform and document an exhaustive page-by-page claim audit for every routed surface, each FAQ item, and all handover UI claims with evidence references.
 - [x] Save and confirm a new checkpoint after the Phase 6 citation, UI, and test changes.
-- [ ] Save and confirm the post-Phase-6 checkpoint after the citation, UI, test, and audit-report changes.
+- [x] Save and confirm the post-Phase-6 checkpoint after the citation, UI, test, and audit-report changes.
