@@ -99,3 +99,10 @@
 - [x] Implement the smallest compatible fix for the Pages deployment and SPA fallback/base path.
 - [x] Push the fix and verify the live GitHub Pages URL returns the portal instead of 404.
 - [x] Save a corrected checkpoint and report the verified deployment URL.
+
+## GitHub Pages Interaction Failure
+
+- [x] Reproduce the non-clickable controls on the live GitHub Pages deployment and inspect browser/network errors.
+- [x] Determine whether the failure is caused by static-host backend incompatibility, routing, stale assets, or JavaScript errors.
+- [x] Deploy the smallest reliable fix or clearly direct users to the verified full-stack deployment URL.
+- [x] Verify a representative navigation click, search interaction, and working deployment URL.
