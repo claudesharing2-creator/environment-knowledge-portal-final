@@ -193,7 +193,7 @@
 
 ## Bug Follow-up — 404 pada Navigasi Pilih Aspek
 
-- [ ] Reproduksi 404 saat tombol “Pilih aspek”/“Mulai belajar” dibuka dari GitHub Pages
-- [ ] Perbaiki fallback SPA dan routing materi aspek pada host project Pages
-- [ ] Uji langsung Beranda → `/learn/D01` pada URL Pages, termasuk tombol dan mobile
-- [ ] Push perbaikan dan simpan checkpoint baru setelah URL terverifikasi
+- [x] Reproduksi 404 saat tombol “Pilih aspek”/“Mulai belajar” dibuka dari GitHub Pages
+- [x] Perbaiki fallback SPA dan routing materi aspek pada host project Pages
+- [x] Uji langsung Beranda → `/learn/D01` pada URL Pages, termasuk tombol dan mobile
+- [x] Push perbaikan dan simpan checkpoint baru setelah URL terverifikasi
