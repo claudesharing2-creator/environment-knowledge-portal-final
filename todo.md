@@ -106,3 +106,18 @@
 - [x] Determine whether the failure is caused by static-host backend incompatibility, routing, stale assets, or JavaScript errors.
 - [x] Deploy the smallest reliable fix or clearly direct users to the verified full-stack deployment URL.
 - [x] Verify a representative navigation click, search interaction, and working deployment URL.
+
+## Manus Space Usability and Indonesian Localization
+
+- [x] Reproduce the reported Manus Space interaction failure and capture the failing route, request, or runtime behavior.
+- [x] Fix the smallest blocking runtime or interaction issue without weakening source-grounding or authentication controls.
+- [x] Translate the portal navigation, headings, controls, states, prompts, and onboarding copy into Indonesian.
+- [x] Validate navigation, search, data loading, AI states, mobile layout, and language consistency.
+- [x] Save and confirm a localized working checkpoint and provide the verified URL.
+
+## Follow-up Corrections — Manus Space and Localization
+
+- [x] Document that the original Manus Space failure was not reproducible: navigation and Indonesian search returned data successfully; GitHub Pages was the deployment with the confirmed backend 404.
+- [x] Complete the remaining Indonesian UI sweep, including Facets, Toggle Sidebar, mixed-language fallback states, and remaining detail labels.
+- [x] Run explicit post-localization mobile, navigation, search, data-loading, and AI-state validation and record the evidence.
+- [x] Save a new checkpoint after the corrected localization and validation evidence is complete.

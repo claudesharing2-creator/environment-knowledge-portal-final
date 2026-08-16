@@ -10,12 +10,12 @@ import { useEffect, useState } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export const menuItems = [
-  { label: "Home", path: "/", icon: Home }, { label: "Start Here", path: "/start-here", icon: Sparkles }, { label: "Learning Path", path: "/learning-path", icon: BookOpen },
-  { label: "Topics / Domains", path: "/topics", icon: Layers3 }, { label: "Tasks / How-To", path: "/tasks", icon: ListChecks }, { label: "Workflows", path: "/workflows", icon: GitBranch },
-  { label: "I'm Taking Over", path: "/take-over", icon: ClipboardCheck }, { label: "Sites & Facilities", path: "/sites", icon: MapPin }, { label: "Monitoring", path: "/monitoring", icon: Waypoints },
-  { label: "Compliance", path: "/compliance", icon: ShieldCheck }, { label: "Documents", path: "/documents", icon: FileText }, { label: "Glossary", path: "/glossary", icon: BookOpen },
-  { label: "FAQ", path: "/faq", icon: HelpCircle }, { label: "Knowledge Gaps", path: "/knowledge-gaps", icon: Flag }, { label: "Conflicts / Verification", path: "/conflicts", icon: ShieldCheck },
-  { label: "AI Assistant", path: "/ai", icon: Bot }, { label: "Search", path: "/search", icon: Search },
+  { label: "Beranda", path: "/", icon: Home }, { label: "Mulai di Sini", path: "/start-here", icon: Sparkles }, { label: "Jalur Belajar", path: "/learning-path", icon: BookOpen },
+  { label: "Topik / Domain", path: "/topics", icon: Layers3 }, { label: "Tugas / Panduan", path: "/tasks", icon: ListChecks }, { label: "Alur Kerja", path: "/workflows", icon: GitBranch },
+  { label: "Serah Terima", path: "/take-over", icon: ClipboardCheck }, { label: "Lokasi & Fasilitas", path: "/sites", icon: MapPin }, { label: "Pemantauan", path: "/monitoring", icon: Waypoints },
+  { label: "Kepatuhan", path: "/compliance", icon: ShieldCheck }, { label: "Dokumen", path: "/documents", icon: FileText }, { label: "Glosarium", path: "/glossary", icon: BookOpen },
+  { label: "FAQ", path: "/faq", icon: HelpCircle }, { label: "Kesenjangan Pengetahuan", path: "/knowledge-gaps", icon: Flag }, { label: "Konflik / Verifikasi", path: "/conflicts", icon: ShieldCheck },
+  { label: "Asisten AI", path: "/ai", icon: Bot }, { label: "Pencarian", path: "/search", icon: Search },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -36,7 +36,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <div className="h-10 w-10 rounded-xl bg-[#d9f99d] text-[#12362b] flex items-center justify-center font-black text-lg">E</div>
               <div className="group-data-[collapsible=icon]:hidden min-w-0">
                 <p className="font-semibold tracking-tight text-white truncate">Environment</p>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-emerald-200/70">Knowledge Base</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-emerald-200/70">Basis Pengetahuan</p>
               </div>
             </div>
           </SidebarHeader>
@@ -50,13 +50,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             </SidebarMenu>
           </SidebarContent>
           <SidebarFooter className="p-3 border-t border-white/10">
-            {user ? <DropdownMenu><DropdownMenuTrigger asChild><button className="flex items-center gap-2 w-full text-left group-data-[collapsible=icon]:justify-center"><Avatar className="h-8 w-8 bg-emerald-100 text-emerald-950"><AvatarFallback>{user.name?.charAt(0).toUpperCase() ?? "U"}</AvatarFallback></Avatar><span className="text-xs text-emerald-50/80 truncate group-data-[collapsible=icon]:hidden">{user.name ?? user.email}</span></button></DropdownMenuTrigger><DropdownMenuContent align="start"><DropdownMenuItem onClick={logout}>Sign out</DropdownMenuItem></DropdownMenuContent></DropdownMenu> : <Button onClick={() => startLogin()} size="sm" className="bg-[#d9f99d] text-[#12362b] hover:bg-lime-200 group-data-[collapsible=icon]:px-2"><span className="group-data-[collapsible=icon]:hidden">Sign in</span><span className="hidden group-data-[collapsible=icon]:inline">↗</span></Button>}
+            {user ? <DropdownMenu><DropdownMenuTrigger asChild><button className="flex items-center gap-2 w-full text-left group-data-[collapsible=icon]:justify-center"><Avatar className="h-8 w-8 bg-emerald-100 text-emerald-950"><AvatarFallback>{user.name?.charAt(0).toUpperCase() ?? "U"}</AvatarFallback></Avatar><span className="text-xs text-emerald-50/80 truncate group-data-[collapsible=icon]:hidden">{user.name ?? user.email}</span></button></DropdownMenuTrigger><DropdownMenuContent align="start"><DropdownMenuItem onClick={logout}>Keluar</DropdownMenuItem></DropdownMenuContent></DropdownMenu> : <Button onClick={() => startLogin()} size="sm" className="bg-[#d9f99d] text-[#12362b] hover:bg-lime-200 group-data-[collapsible=icon]:px-2"><span className="group-data-[collapsible=icon]:hidden">Masuk</span><span className="hidden group-data-[collapsible=icon]:inline">↗</span></Button>}
           </SidebarFooter>
         </Sidebar>
         <SidebarInset className="min-w-0 bg-[#f8faf7]">
           <header className="sticky top-0 z-30 h-16 border-b border-emerald-950/10 bg-[#f8faf7]/95 backdrop-blur flex items-center justify-between px-4 md:px-8">
-            <div className="flex items-center gap-3"><SidebarTrigger className="h-9 w-9" /><div><p className="text-[11px] uppercase tracking-[0.18em] text-emerald-700/70">Environment Knowledge & Handover</p><h1 className="text-sm font-semibold text-slate-900">{active.label}</h1></div></div>
-            <div className="hidden md:flex items-center gap-2 text-xs text-slate-500"><span className="h-2 w-2 rounded-full bg-emerald-500" /> Source-grounded workspace</div>
+            <div className="flex items-center gap-3"><SidebarTrigger aria-label="Buka atau tutup navigasi" title="Buka atau tutup navigasi" className="h-9 w-9" /><div><p className="text-[11px] uppercase tracking-[0.18em] text-emerald-700/70">Pengetahuan & Serah Terima Lingkungan</p><h1 className="text-sm font-semibold text-slate-900">{active.label}</h1></div></div>
+            <div className="hidden md:flex items-center gap-2 text-xs text-slate-500"><span className="h-2 w-2 rounded-full bg-emerald-500" /> Ruang kerja berbasis sumber</div>
           </header>
           <main className="p-4 md:p-8 max-w-[1600px] mx-auto w-full">{children}</main>
         </SidebarInset>
