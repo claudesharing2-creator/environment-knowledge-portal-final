@@ -6,10 +6,12 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { Home, PortalRoute, SearchPage, AIPage, HandoverPage, CompliancePage } from "./pages/Portal";
 import NotFound from "./pages/NotFound";
 import { Route, Switch, Router as WouterRouter } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 
 function Router() {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-  return <WouterRouter base={base}><DashboardLayout><Switch>
+  const isGitHubPages = import.meta.env.BASE_URL !== "/";
+  const base = isGitHubPages ? "" : import.meta.env.BASE_URL.replace(/\/$/, "");
+  return <WouterRouter base={base} hook={isGitHubPages ? useHashLocation : undefined}><DashboardLayout><Switch>
     <Route path="/" component={Home} />
     <Route path="/search" component={SearchPage} />
     <Route path="/ai" component={AIPage} />
