@@ -55,7 +55,10 @@ export function getStatus(type: PortalType, item: RawRecord) {
 
 export function sourceRefs(item: RawRecord) {
   const values = [item.source_references, item.source_document_ids, item.source_refs, item.document_ids, item.source_documents, item.source_a, item.source_b].flatMap(value => Array.isArray(value) ? value : value ? [value] : []);
-  return Array.from(new Set(values.map(String))).slice(0, 12);
+  const documents = new Map(((seed.documents as RawRecord[]) ?? []).map(document => [String(document.document_id ?? ""), document]));
+  const mapped = values.map(String).map(ref => { if (ref.includes("|")) return ref; const id = ref.match(/ENV-\d+/)?.[0]; const document = id ? documents.get(id) : undefined; const filename = document?.filename ?? document?.relative_path; return id && filename ? `${id} | ${filename}` : ref; });
+  const locator = item.locator ? String(item.locator) : "";
+  return Array.from(new Set([...mapped, ...(locator ? [locator] : [])])).slice(0, 12);
 }
 
 const acronymExpansions: Record<string, string[]> = { "rkl-rpl": ["rkl", "rpl", "environmental", "monitoring"], pkkprl: ["marine", "space", "permit"], wbm: ["water", "based", "mud"], sbm: ["synthetic", "based", "mud"] };

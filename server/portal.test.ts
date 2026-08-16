@@ -34,7 +34,9 @@ describe("portal audited knowledge", () => {
     expect(result.length).toBeGreaterThan(0);
     expect(result[0]).toHaveProperty("status");
     expect(result[0]).toHaveProperty("refs");
-    expect(result.flatMap(item => item.refs).every(ref => typeof ref === "string" && /ENV-\d+/.test(ref) && !ref.includes("[object Object]"))).toBe(true);
+    const refs = result.flatMap(item => item.refs);
+    expect(refs.some(ref => /ENV-\d+/.test(ref))).toBe(true);
+    expect(refs.every(ref => typeof ref === "string" && ref.length > 2 && !ref.includes("[object Object]"))).toBe(true);
   });
 
   it("returns search facets and expands seeded glossary/acronym terms", async () => {
@@ -66,12 +68,16 @@ describe("portal audited knowledge", () => {
     const documentResult = await caller.portal.aiAsk({ question: "Which document explains water monitoring?" });
     expect(documentResult.kind).toBe("document_search");
     expect(documentResult.answer).toContain("source-backed records");
+    expect(documentResult.citations.some(citation => /ENV-\d+/.test(citation))).toBe(true);
+    expect(["SOURCE_SUPPORTED", "PARTIAL_EVIDENCE"]).toContain(documentResult.status);
     const handoverResult = await caller.portal.aiAsk({ question: "What should I take over from the current owner?" });
     expect(handoverResult.kind).toBe("handover");
     expect(handoverResult.answer).toContain("I’m Taking Over");
+    expect(handoverResult.citations.some(citation => /ENV-\d+/.test(citation))).toBe(true);
     const uncertaintyResult = await caller.portal.aiAsk({ question: "Which missing gap should I verify?" });
     expect(uncertaintyResult.kind).toBe("uncertainty");
     expect(["PARTIAL_EVIDENCE", "REQUIRES_HUMAN_REVIEW", "NOT_FOUND"]).toContain(uncertaintyResult.status);
+    if (uncertaintyResult.status !== "NOT_FOUND") expect(uncertaintyResult.citations.some(citation => /ENV-\d+/.test(citation))).toBe(true);
   });
 
   it("rejects unauthenticated and unknown-workspace handover procedures", async () => {

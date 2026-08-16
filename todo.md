@@ -40,3 +40,22 @@
 - [x] Add surfaced search facet groups and counts, and wire glossary-term expansion from the seeded glossary records.
 - [x] Use question classification to drive distinct retrieval/response paths by question kind.
 - [x] Expand Vitest to validate citation contents/structure and authenticated handover get/update/note procedure behavior.
+
+## Phase 6 — Source Accuracy Audit
+
+- [x] Inventory every implemented knowledge surface and its source-backed claim set.
+- [x] Compare every topic, task, workflow, FAQ, glossary, site, compliance, document, monitoring, handover, and AI claim against original source evidence.
+- [x] Classify claims as SUPPORTED, PARTIALLY SUPPORTED, UNSUPPORTED, CONTRADICTED, or GENERIC.
+- [x] Verify citation filename, page/slide/section/location fidelity and citation-to-claim coverage.
+- [x] Audit invented procedures, responsibilities, deadlines, frequencies, limits, regulations, sites, facilities, roles, workflow steps, and document names.
+- [x] Audit all known source conflicts and preserve Source A versus Source B without silent resolution.
+- [x] Apply critical factual corrections or visible review flags to the application.
+- [x] Produce the Phase 6 accuracy report with totals, errors, missing sources, corrections, and residual risks.
+- [x] Run post-audit tests, type checks, visual verification, and save the Phase 6 checkpoint.
+- [x] Enumerate every implemented surface explicitly, including FAQ, Start Here, Learning Path, and any additional routed pages, with a recorded claim-set audit.
+- [x] Complete a page-by-page manual claim audit for remaining UI copy, FAQ, and handover claims.
+- [x] Add representative claim-level AI audit coverage for each question class, or explicitly narrow the audit scope to response paths.
+- [x] Save a new checkpoint after all Phase 6 corrections and coverage updates.
+- [x] Perform and document an exhaustive page-by-page claim audit for every routed surface, each FAQ item, and all handover UI claims with evidence references.
+- [x] Save and confirm a new checkpoint after the Phase 6 citation, UI, and test changes.
+- [ ] Save and confirm the post-Phase-6 checkpoint after the citation, UI, test, and audit-report changes.
