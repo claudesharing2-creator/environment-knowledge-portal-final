@@ -182,11 +182,11 @@
 
 ## Perubahan Scope — Portal Baca-Saja dan GitHub Pages
 
-- [ ] Hapus menu dan rute Login dari pengalaman pengguna publik
-- [ ] Hapus menu dan rute Asisten AI dari pengalaman pengguna publik
-- [ ] Hapus menu dan rute Serah Terima dari pengalaman pengguna publik
-- [ ] Pastikan seluruh materi, pencarian, sitasi, glosarium, FAQ, kepatuhan, dan detail bukti tetap dapat dibaca tanpa autentikasi
-- [ ] Perbaiki konfigurasi build/deploy GitHub Pages agar URL publik tidak 404
-- [ ] Uji akses baca-saja dan responsif pada seluruh rute publik
-- [ ] Push perubahan final dan verifikasi URL GitHub Pages
-- [ ] Simpan checkpoint final setelah perubahan teruji
+- [x] Hapus menu dan rute Login dari pengalaman pengguna publik
+- [x] Hapus menu dan rute Asisten AI dari pengalaman pengguna publik
+- [x] Hapus menu dan rute Serah Terima dari pengalaman pengguna publik
+- [x] Pastikan seluruh materi, pencarian, sitasi, glosarium, FAQ, kepatuhan, dan detail bukti tetap dapat dibaca tanpa autentikasi
+- [x] Perbaiki konfigurasi build/deploy GitHub Pages agar URL publik tidak 404
+- [x] Uji akses baca-saja dan responsif pada seluruh rute publik
+- [x] Push perubahan final dan verifikasi URL GitHub Pages
+- [x] Simpan checkpoint final setelah perubahan teruji
