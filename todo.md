@@ -85,3 +85,10 @@
 - [x] Verify deployment, backup, knowledge-base update, document replacement/versioning, and AI/RAG maintenance procedures.
 - [x] Produce the production-readiness score, critical issues, technical debt register, administrator guide, and new-personnel user guide.
 - [x] Run final Phase 8 validation and save a confirmed production-readiness checkpoint.
+
+## Final Repository and Publish Delivery
+
+- [ ] Run final validation and confirm the production-ready project state before repository export.
+- [ ] Create a new private GitHub repository and push the finalized project code.
+- [ ] Save and confirm the final checkpoint for publish readiness.
+- [ ] Provide the GitHub repository URL, checkpoint version, and Management UI publish instructions.
