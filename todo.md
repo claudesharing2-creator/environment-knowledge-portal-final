@@ -208,8 +208,8 @@
 
 ## Bug Follow-up — Reproduksi Nyata Pesan Materi Tidak Tersedia
 
-- [ ] Reproduksi alur klik pengguna dari URL publik dan catat URL/hash yang benar-benar terbuka
-- [ ] Identifikasi bundle/data yang benar-benar dipakai browser saat pesan error muncul
-- [ ] Perbaiki penyebab yang terbukti, bukan hanya menambah validasi data internal
-- [ ] Uji ulang alur klik yang sama pada URL publik setelah deployment baru
-- [ ] Push dan simpan checkpoint hanya setelah hasil browser sesuai
+- [x] Reproduksi alur klik pengguna dari URL publik dan catat URL/hash yang benar-benar terbuka
+- [x] Identifikasi bundle/data yang benar-benar dipakai browser saat pesan error muncul
+- [x] Perbaiki penyebab yang terbukti, bukan hanya menambah validasi data internal
+- [x] Uji ulang alur klik yang sama pada URL publik setelah deployment baru
+- [x] Push dan simpan checkpoint hanya setelah hasil browser sesuai
