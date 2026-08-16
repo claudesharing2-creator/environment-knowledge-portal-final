@@ -90,5 +90,5 @@
 
 - [x] Run final validation and confirm the production-ready project state before repository export.
 - [x] Create a new private GitHub repository and push the finalized project code.
-- [ ] Save and confirm the final checkpoint for publish readiness.
-- [ ] Provide the GitHub repository URL, checkpoint version, and Management UI publish instructions.
+- [x] Save and confirm the final checkpoint for publish readiness.
+- [x] Provide the GitHub repository URL, checkpoint version, and Management UI publish instructions.
