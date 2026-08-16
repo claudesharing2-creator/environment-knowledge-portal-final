@@ -18,7 +18,12 @@ const fields: Record<PortalType, string[]> = {
 };
 
 function idOf(item: RawRecord) { return String(item.document_id ?? item.domain_id ?? item.site_group_id ?? item.monitoring_id ?? item.workflow_id ?? item.task_id ?? item.role_id ?? item.site_id ?? item.regulation_id ?? item.parameter_id ?? item.glossary_id ?? item.gap_id ?? item.conflict_id ?? ""); }
-function normalizeId(value: string) { return String(value ?? "").trim().toUpperCase(); }
+function normalizeId(value: string) {
+  const normalized = String(value ?? "").trim().toUpperCase();
+  const numericDomain = normalized.match(/^(?:D)?(\d{1,2})$/);
+  if (numericDomain) return `D${numericDomain[1].padStart(2, "0")}`;
+  return normalized;
+}
 function titleOf(type: PortalType, item: RawRecord) { return fields[type].map(field => item[field]).find(Boolean)?.toString() ?? "Catatan tanpa judul"; }
 function statusOf(type: PortalType, item: RawRecord) { if (type === "conflict") return "CONFLICTING"; if (type === "gap") return "REQUIRES_HUMAN_REVIEW"; return String(item.status ?? item.confirmation_status ?? item.currency_status ?? "SOURCE_SUPPORTED").split(" — ")[0]; }
 function refsOf(item: RawRecord) {

@@ -205,3 +205,11 @@
 - [x] Perbaiki pemetaan atau fallback materi agar seluruh aspek dapat dibaca langsung
 - [x] Uji seluruh URL materi aspek D01–D11 dan tombol Beranda
 - [x] Push perbaikan dan simpan checkpoint baru
+
+## Bug Follow-up — Reproduksi Nyata Pesan Materi Tidak Tersedia
+
+- [ ] Reproduksi alur klik pengguna dari URL publik dan catat URL/hash yang benar-benar terbuka
+- [ ] Identifikasi bundle/data yang benar-benar dipakai browser saat pesan error muncul
+- [ ] Perbaiki penyebab yang terbukti, bukan hanya menambah validasi data internal
+- [ ] Uji ulang alur klik yang sama pada URL publik setelah deployment baru
+- [ ] Push dan simpan checkpoint hanya setelah hasil browser sesuai

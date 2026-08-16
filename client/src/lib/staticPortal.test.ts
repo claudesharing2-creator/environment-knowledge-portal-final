@@ -11,6 +11,7 @@ describe("bundled learning domains", () => {
       expect(item?.id).toBe(id);
       expect(item?.title).toBeTruthy();
       expect(item?.refs.length).toBeGreaterThan(0);
+      if (index < 10) expect(getStatic("domain", `d${index}`)?.id).toBe(id);
     }
   });
 });
