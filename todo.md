@@ -121,3 +121,27 @@
 - [x] Complete the remaining Indonesian UI sweep, including Facets, Toggle Sidebar, mixed-language fallback states, and remaining detail labels.
 - [x] Run explicit post-localization mobile, navigation, search, data-loading, and AI-state validation and record the evidence.
 - [x] Save a new checkpoint after the corrected localization and validation evidence is complete.
+
+## Evidence Detail Interaction Fix
+
+- [x] Reproduce the Buka bukti failure and inspect EvidenceCard, route, and detail-state wiring.
+- [x] Fix Buka bukti so the selected record opens its detail and citation panel reliably.
+- [x] Validate detail opening, source references, back navigation, and related route behavior.
+- [x] Save a corrected checkpoint and document how users should use Buka bukti.
+
+## Evidence Detail Follow-up
+
+- [x] Wire Buka bukti on Search results to open the correct detail route for each record type.
+- [x] Retest Buka bukti on Topics and Search, including source references and back navigation.
+- [x] Save a new checkpoint after the shared evidence-detail flow is fully validated.
+
+## Evidence Detail Verification Gap
+
+- [x] Retest Search Buka bukti through citation-panel expansion and back-navigation, then record the result.
+- [x] Save a new checkpoint after the shared Buka bukti flow is fully validated and record its version.
+
+## Search Detail Return Behavior
+
+- [x] Preserve the originating Search query when opening Buka bukti from Search results.
+- [x] Make the detail back action return to Search results when the detail was opened from Search, while keeping list-page back behavior unchanged.
+- [x] Explicitly expand the Search-derived citation panel, record visible source references in the audit notes, and save a new checkpoint with its version.
