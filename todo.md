@@ -221,3 +221,13 @@
 - [x] Tambahkan redirect root yang aman bila root akun memang menerima trafik
 - [x] Deploy dan verifikasi URL Beranda serta URL materi aspek tanpa kehilangan project base
 - [x] Push dan simpan checkpoint setelah redirect terverifikasi
+
+## Rebuild Total — Situs HTML Baca-Saja
+
+- [x] Inventaris materi sumber dan tetapkan 11 aspek sebagai halaman baca langsung
+- [x] Bangun ulang landing page HTML sederhana dengan pilihan aspek yang jelas
+- [x] Bangun halaman materi aspek menggunakan hash navigation tanpa backend atau API
+- [x] Tambahkan pencarian lokal, panel sitasi, glosarium, FAQ, dan halaman sumber
+- [x] Hapus ketergantungan login, AI, serah terima, tRPC, dan routing server dari pengalaman publik
+- [x] Uji semua tombol, URL hash, desktop, mobile, dan GitHub Pages
+- [x] Push rebuild HTML ke repository final dan simpan checkpoint
