@@ -179,3 +179,14 @@
 - [x] Replace remaining English empty-evidence fallbacks in task and document detail fields
 - [x] Retest all primary route families, mobile navigation, AI, handover, and detail back paths after the final fallback fix
 - [x] Save a new final checkpoint after the last verified changes
+
+## Perubahan Scope — Portal Baca-Saja dan GitHub Pages
+
+- [ ] Hapus menu dan rute Login dari pengalaman pengguna publik
+- [ ] Hapus menu dan rute Asisten AI dari pengalaman pengguna publik
+- [ ] Hapus menu dan rute Serah Terima dari pengalaman pengguna publik
+- [ ] Pastikan seluruh materi, pencarian, sitasi, glosarium, FAQ, kepatuhan, dan detail bukti tetap dapat dibaca tanpa autentikasi
+- [ ] Perbaiki konfigurasi build/deploy GitHub Pages agar URL publik tidak 404
+- [ ] Uji akses baca-saja dan responsif pada seluruh rute publik
+- [ ] Push perubahan final dan verifikasi URL GitHub Pages
+- [ ] Simpan checkpoint final setelah perubahan teruji
