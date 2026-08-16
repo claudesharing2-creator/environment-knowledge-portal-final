@@ -200,8 +200,8 @@
 
 ## Bug Follow-up — Materi Aspek Tidak Tersedia
 
-- [ ] Reproduksi pesan “Materi aspek tidak tersedia” pada URL GitHub Pages dan preview
-- [ ] Audit ID domain D01–D11 terhadap data sumber ZIP yang dibundel
-- [ ] Perbaiki pemetaan atau fallback materi agar seluruh aspek dapat dibaca langsung
-- [ ] Uji seluruh URL materi aspek D01–D11 dan tombol Beranda
-- [ ] Push perbaikan dan simpan checkpoint baru
+- [x] Reproduksi pesan “Materi aspek tidak tersedia” pada URL GitHub Pages dan preview
+- [x] Audit ID domain D01–D11 terhadap data sumber ZIP yang dibundel
+- [x] Perbaiki pemetaan atau fallback materi agar seluruh aspek dapat dibaca langsung
+- [x] Uji seluruh URL materi aspek D01–D11 dan tombol Beranda
+- [x] Push perbaikan dan simpan checkpoint baru
