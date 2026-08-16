@@ -90,3 +90,12 @@ describe("portal audited knowledge", () => {
     await expect(caller.portal.handoverNoteDelete({ projectId: 999999, noteId: 1 })).rejects.toThrow();
   });
 });
+
+  it("exposes inline learning material for every environmental domain", async () => {
+    const caller = appRouter.createCaller(createContext());
+    const domains = await caller.portal.list({ type: "domain", limit: 20 });
+    expect(domains).toHaveLength(11);
+    expect(domains.every(item => typeof item.id === "string" && item.id.startsWith("D"))).toBe(true);
+    expect(domains.every(item => item.refs.length > 0)).toBe(true);
+    expect(domains.every(item => item.data && (Array.isArray(item.data.core_concepts) || typeof item.data.purpose === "string"))).toBe(true);
+  });

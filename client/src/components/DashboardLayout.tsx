@@ -11,7 +11,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 
 export const menuItems = [
   { label: "Beranda", path: "/", icon: Home }, { label: "Mulai di Sini", path: "/start-here", icon: Sparkles }, { label: "Jalur Belajar", path: "/learning-path", icon: BookOpen },
-  { label: "Topik / Domain", path: "/topics", icon: Layers3 }, { label: "Tugas / Panduan", path: "/tasks", icon: ListChecks }, { label: "Alur Kerja", path: "/workflows", icon: GitBranch },
+  { label: "Aspek Lingkungan", path: "/topics", icon: Layers3 }, { label: "Tugas / Panduan", path: "/tasks", icon: ListChecks }, { label: "Alur Kerja", path: "/workflows", icon: GitBranch },
   { label: "Serah Terima", path: "/take-over", icon: ClipboardCheck }, { label: "Lokasi & Fasilitas", path: "/sites", icon: MapPin }, { label: "Pemantauan", path: "/monitoring", icon: Waypoints },
   { label: "Kepatuhan", path: "/compliance", icon: ShieldCheck }, { label: "Dokumen", path: "/documents", icon: FileText }, { label: "Glosarium", path: "/glossary", icon: BookOpen },
   { label: "FAQ", path: "/faq", icon: HelpCircle }, { label: "Kesenjangan Pengetahuan", path: "/knowledge-gaps", icon: Flag }, { label: "Konflik / Verifikasi", path: "/conflicts", icon: ShieldCheck },
@@ -22,7 +22,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const [location, setLocation] = useLocation();
   const { user, logout } = useAuth();
   const isMobile = useIsMobile();
-  const active = menuItems.find(item => location === item.path) ?? menuItems[0];
+  const active = location.startsWith("/learn/") ? { label: "Materi aspek" } : (menuItems.find(item => location === item.path) ?? menuItems[0]);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => setMobileOpen(false), [location]);
@@ -41,13 +41,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             </div>
           </SidebarHeader>
           <SidebarContent className="px-2 py-3 overflow-y-auto">
-            <SidebarMenu>
-              {menuItems.map(item => {
-                const Icon = item.icon;
-                const isActive = location === item.path || (item.path !== "/" && location.startsWith(item.path));
-                return <SidebarMenuItem key={item.path}><SidebarMenuButton isActive={isActive} tooltip={item.label} onClick={() => setLocation(item.path)} className="h-9 text-[12px] text-emerald-50/75 hover:bg-white/10 hover:text-white data-[active=true]:bg-[#d9f99d] data-[active=true]:text-[#12362b]"><Icon className="h-4 w-4 shrink-0" /><span>{item.label}</span></SidebarMenuButton></SidebarMenuItem>;
-              })}
-            </SidebarMenu>
+            <p className="px-2 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-lime-200/80 group-data-[collapsible=icon]:hidden">Jalur belajar</p>
+            <SidebarMenu>{menuItems.slice(0, 4).map(item => { const Icon = item.icon; const isActive = location === item.path || (item.path !== "/" && location.startsWith(item.path)); return <SidebarMenuItem key={item.path}><SidebarMenuButton isActive={isActive} tooltip={item.label} onClick={() => setLocation(item.path)} className="h-9 text-[12px] text-emerald-50/75 hover:bg-white/10 hover:text-white data-[active=true]:bg-[#d9f99d] data-[active=true]:text-[#12362b]"><Icon className="h-4 w-4 shrink-0" /><span>{item.label}</span></SidebarMenuButton></SidebarMenuItem>; })}</SidebarMenu>
+            <p className="mt-5 px-2 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-200/60 group-data-[collapsible=icon]:hidden">Alat pendukung</p>
+            <SidebarMenu>{menuItems.slice(4).map(item => { const Icon = item.icon; const isActive = location === item.path || (item.path !== "/" && location.startsWith(item.path)); return <SidebarMenuItem key={item.path}><SidebarMenuButton isActive={isActive} tooltip={item.label} onClick={() => setLocation(item.path)} className="h-9 text-[12px] text-emerald-50/75 hover:bg-white/10 hover:text-white data-[active=true]:bg-[#d9f99d] data-[active=true]:text-[#12362b]"><Icon className="h-4 w-4 shrink-0" /><span>{item.label}</span></SidebarMenuButton></SidebarMenuItem>; })}</SidebarMenu>
           </SidebarContent>
           <SidebarFooter className="p-3 border-t border-white/10">
             {user ? <DropdownMenu><DropdownMenuTrigger asChild><button className="flex items-center gap-2 w-full text-left group-data-[collapsible=icon]:justify-center"><Avatar className="h-8 w-8 bg-emerald-100 text-emerald-950"><AvatarFallback>{user.name?.charAt(0).toUpperCase() ?? "U"}</AvatarFallback></Avatar><span className="text-xs text-emerald-50/80 truncate group-data-[collapsible=icon]:hidden">{user.name ?? user.email}</span></button></DropdownMenuTrigger><DropdownMenuContent align="start"><DropdownMenuItem onClick={logout}>Keluar</DropdownMenuItem></DropdownMenuContent></DropdownMenu> : <Button onClick={() => startLogin()} size="sm" className="bg-[#d9f99d] text-[#12362b] hover:bg-lime-200 group-data-[collapsible=icon]:px-2"><span className="group-data-[collapsible=icon]:hidden">Masuk</span><span className="hidden group-data-[collapsible=icon]:inline">↗</span></Button>}
@@ -56,7 +53,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <SidebarInset className="min-w-0 bg-[#f8faf7]">
           <header className="sticky top-0 z-30 h-16 border-b border-emerald-950/10 bg-[#f8faf7]/95 backdrop-blur flex items-center justify-between px-4 md:px-8">
             <div className="flex items-center gap-3"><SidebarTrigger aria-label="Buka atau tutup navigasi" title="Buka atau tutup navigasi" className="h-9 w-9" /><div><p className="text-[11px] uppercase tracking-[0.18em] text-emerald-700/70">Pengetahuan & Serah Terima Lingkungan</p><h1 className="text-sm font-semibold text-slate-900">{active.label}</h1></div></div>
-            <div className="hidden md:flex items-center gap-2 text-xs text-slate-500"><span className="h-2 w-2 rounded-full bg-emerald-500" /> Ruang kerja berbasis sumber</div>
+            <div className="hidden md:flex items-center gap-2 text-xs text-slate-500"><span className="h-2 w-2 rounded-full bg-emerald-500" /> Portal belajar berbasis sumber</div>
           </header>
           <main className="p-4 md:p-8 max-w-[1600px] mx-auto w-full">{children}</main>
         </SidebarInset>

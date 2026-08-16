@@ -145,3 +145,19 @@
 - [x] Preserve the originating Search query when opening Buka bukti from Search results.
 - [x] Make the detail back action return to Search results when the detail was opened from Search, while keeping list-page back behavior unchanged.
 - [x] Explicitly expand the Search-derived citation panel, record visible source references in the audit notes, and save a new checkpoint with its version.
+
+## Phase 10 — Beginner Learning Portal Redesign
+
+- [x] Audit the current information architecture and identify why the existing flow feels like a catalog/quiz instead of a learning portal.
+- [x] Define beginner-oriented Indonesian learning aspects and map each aspect to audited in-app material, related tasks, glossary terms, and source references.
+- [x] Redesign the landing page so a new user can choose an environmental aspect as the primary entry point.
+- [x] Implement in-app learning material pages that render the supplied audited content directly without requiring external file loading.
+- [x] Reposition Search, AI, evidence, and handover as supporting tools rather than the primary learning flow.
+- [x] Validate the new-person journey, content readability, source traceability, mobile behavior, and key navigation interactions.
+- [x] Save a new checkpoint after the complete learning-portal redesign is validated.
+
+## Phase 10 Follow-up Corrections
+
+- [x] Surface related glossary terms on each in-app learning aspect page using audited glossary records or an explicit empty state when no relationship is source-stated.
+- [x] Simplify the global navigation so learning aspects are the primary path and Search, AI, evidence, and Handover are clearly secondary support tools.
+- [x] Save and record a new checkpoint after these Phase 10 corrections are validated.
