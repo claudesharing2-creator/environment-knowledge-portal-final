@@ -164,14 +164,18 @@
 
 ## Final Indonesian Accessibility and Repository Delivery
 
-- [ ] Audit every primary route, button, link, evidence action, search action, AI action, learning action, and back-navigation path.
-- [ ] Complete the Indonesian UI sweep and remove remaining prominent English interface labels without translating source-derived evidence incorrectly.
-- [ ] Fix every interaction, routing, loading, empty-state, or mobile issue found during the audit.
-- [ ] Run the complete regression suite, TypeScript validation, build/runtime checks, and visual verification before delivery.
-- [ ] Push the final validated code to the user's GitHub repository and verify the remote branch state.
-- [ ] Save a final checkpoint and report only verified access and repository details.
+- [x] Audit every primary route, button, link, evidence action, search action, AI action, learning action, and back-navigation path.
+- [x] Complete the Indonesian UI sweep and remove remaining prominent English interface labels without translating source-derived evidence incorrectly.
+- [x] Fix every interaction, routing, loading, empty-state, or mobile issue found during the audit.
+- [x] Run the complete regression suite, TypeScript validation, build/runtime checks, and visual verification before delivery.
+- [x] Push the final validated code to the user's GitHub repository and verify the remote branch state.
+- [x] Save a final checkpoint and report only verified access and repository details.
 
-- [ ] Final Indonesian sweep: translate dynamic status, metadata, error, and accessibility labels found during live route audit
-- [ ] Re-run regression tests, TypeScript check, build, and primary click-path verification after final localization fixes
-- [ ] Push the validated final commit to the private GitHub repository
-- [ ] Save and deliver the final published checkpoint
+- [x] Final Indonesian sweep: translate dynamic status, metadata, error, and accessibility labels found during live route audit
+- [x] Re-run regression tests, TypeScript check, build, and primary click-path verification after final localization fixes
+- [x] Push the validated final commit to the private GitHub repository
+- [x] Save and deliver the final published checkpoint
+
+- [x] Replace remaining English empty-evidence fallbacks in task and document detail fields
+- [x] Retest all primary route families, mobile navigation, AI, handover, and detail back paths after the final fallback fix
+- [x] Save a new final checkpoint after the last verified changes
