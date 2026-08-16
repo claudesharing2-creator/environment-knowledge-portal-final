@@ -1,0 +1,42 @@
+# Project TODO
+
+- [x] Establish the dashboard-style application shell with persistent sidebar navigation for Home, Start Here, Learning Path, Topics/Domains, Tasks/How-To, Workflows, I’m Taking Over, Sites & Facilities, Monitoring, Compliance, Documents, Glossary, FAQ, Knowledge Gaps, Conflicts/Verification, AI Assistant, and Search.
+- [x] Apply the professional environmental visual system: deep green primary, slate/blue-gray secondary, warm white surfaces, readable sans-serif typography, accessible status colors with text/icons, and responsive sidebar-first behavior.
+- [x] Define and migrate the seeded audit-derived data model for 11 knowledge domains, 17 tasks, 6 workflows, 12 roles, 16 site groups, 6 monitoring structures, 26 regulations, 139 parameters, 660 glossary terms, 4 conflicts, and 30 knowledge gaps.
+- [x] Import real Phase 1–2 audit data with source identifiers and explicit citation metadata; do not fabricate unsupported operational content.
+- [x] Implement reusable StatusBadge, EvidenceCard, CitationDrawer, and Trust Layer components.
+- [x] Implement all eight evidence states: SOURCE_VERIFIED, SOURCE_SUPPORTED, PARTIAL_EVIDENCE, CONFLICTING, REQUIRES_HUMAN_REVIEW, HISTORICAL, SUPERSEDED, and NOT_FOUND.
+- [x] Ensure status indicators always pair semantic color with visible text labels and/or icons.
+- [x] Implement task/how-to detail pages with purpose, steps, inputs/outputs, required documents, roles, related regulations, knowledge gaps, citations, and visible PARTIAL_EVIDENCE controls for missing fields.
+- [x] Implement the I’m Taking Over handover experience with source-derived task chooser, progress tracking, status fields, missing-information prompts, and user-owned handover notes.
+- [x] Implement source-derived site and facility records with identity status, facilities, monitoring structures, parameters, and source citations.
+- [x] Implement visually distinct compliance layers: regulations/standards, company requirements, permits/approvals, and practices/guidance.
+- [x] Implement document library with original filenames, document type, status, source path, effective date, version, duplicates, and unprocessed-file handling.
+- [x] Implement glossary and FAQ pages from seeded audit data with citations and uncertainty states.
+- [x] Implement knowledge gaps and conflicts/verification pages with human-review workflows and Source A versus Source B comparison.
+- [x] Implement keyword/full-text/metadata search across all approved knowledge entities with filters, facets, autocomplete, typo tolerance, and acronym/glossary expansion where supported.
+- [x] Implement guarded source-grounded AI assistant using question classification, seeded knowledge retrieval, status-aware context assembly, citations, and SOURCE_SUPPORTED/PARTIAL_EVIDENCE/CONFLICTING/NOT_FOUND responses.
+- [x] Ensure the AI never resolves conflicts, invents company-specific procedures, or answers company-specific questions from model memory alone.
+- [x] Evaluate and use the prebuilt DashboardLayout and AIChatBox components where appropriate.
+- [x] Add loading, empty, error, insufficient-evidence, conflict, permission, and source-unavailable states.
+- [x] Add responsive desktop, laptop, tablet, and mobile field-reference behavior.
+- [x] Add Vitest coverage for seeded data integrity, status policy, citation validation, conflict non-resolution, AI refusal behavior, and key tRPC procedures.
+- [x] Run type checks, tests, and visual verification screenshots for the primary routes.
+- [x] Document local setup, ingestion/update workflow, seeded-data provenance, AI/RAG behavior, environment variables, deployment considerations, and known limitations.
+- [x] Save the final project checkpoint after all completed items are marked [x].
+- [x] Model site groups and monitoring structures explicitly, or document the traceable reason they cannot be first-class seeded entities.
+- [x] Extract a reusable TrustLayer component and use it across detail views.
+- [x] Add task step-by-step workflow rendering and explicit linked knowledge-gap records.
+- [x] Implement handover project detail UI with progress/status updates, missing-information prompts, and note CRUD.
+- [x] Add explicit site/facility identity, facility, monitoring, and parameter sections.
+- [x] Add dedicated document metadata sections for duplicates, unprocessed state, effective date, version, and source path.
+- [x] Upgrade search with filters, facets, autocomplete, typo tolerance, and glossary/acronym expansion where supported.
+- [x] Add classifier-backed AI routing and make conflict non-resolution and citation behavior directly testable.
+- [x] Add explicit application error and source-unavailable states.
+- [x] Expand Vitest coverage for conflict non-resolution, citation validation, handover procedures, and AI guardrails.
+- [x] Expand implementation documentation with environment variable usage and deployment/runtime considerations.
+- [x] Add full handover note edit/delete flows and tests, or explicitly narrow the implementation contract from CRUD to create/read/update.
+- [x] Build dedicated site/facility detail sections for identity, facilities, monitoring structures, and related parameters.
+- [x] Add surfaced search facet groups and counts, and wire glossary-term expansion from the seeded glossary records.
+- [x] Use question classification to drive distinct retrieval/response paths by question kind.
+- [x] Expand Vitest to validate citation contents/structure and authenticated handover get/update/note procedure behavior.
