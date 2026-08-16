@@ -95,7 +95,7 @@
 
 ## GitHub Pages 404 Remediation
 
-- [ ] Inspect GitHub Pages source, workflow configuration, and repository build artifacts.
-- [ ] Implement the smallest compatible fix for the Pages deployment and SPA fallback/base path.
-- [ ] Push the fix and verify the live GitHub Pages URL returns the portal instead of 404.
-- [ ] Save a corrected checkpoint and report the verified deployment URL.
+- [x] Inspect GitHub Pages source, workflow configuration, and repository build artifacts.
+- [x] Implement the smallest compatible fix for the Pages deployment and SPA fallback/base path.
+- [x] Push the fix and verify the live GitHub Pages URL returns the portal instead of 404.
+- [x] Save a corrected checkpoint and report the verified deployment URL.
