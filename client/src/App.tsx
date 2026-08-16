@@ -5,10 +5,11 @@ import DashboardLayout from "./components/DashboardLayout";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { Home, PortalRoute, SearchPage, AIPage, HandoverPage, CompliancePage } from "./pages/Portal";
 import NotFound from "./pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router as WouterRouter } from "wouter";
 
 function Router() {
-  return <DashboardLayout><Switch>
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+  return <WouterRouter base={base}><DashboardLayout><Switch>
     <Route path="/" component={Home} />
     <Route path="/search" component={SearchPage} />
     <Route path="/ai" component={AIPage} />
@@ -20,7 +21,7 @@ function Router() {
     <Route path="/sites" component={PortalRoute} /><Route path="/monitoring" component={PortalRoute} /><Route path="/compliance" component={CompliancePage} />
     <Route path="/documents" component={PortalRoute} /><Route path="/glossary" component={PortalRoute} /><Route path="/knowledge-gaps" component={PortalRoute} /><Route path="/conflicts" component={PortalRoute} />
     <Route path="/404" component={NotFound} /><Route component={NotFound} />
-  </Switch></DashboardLayout>;
+  </Switch></DashboardLayout></WouterRouter>;
 }
 
 function StartHere(){return <div className="max-w-4xl"><div className="mb-8"><p className="text-[11px] uppercase tracking-[0.22em] text-emerald-700">Orientation</p><h2 className="mt-3 text-4xl font-semibold tracking-tight text-slate-950">Start with the evidence layer.</h2><p className="mt-4 text-sm leading-7 text-slate-600">This portal is organized around audited Environment source material. Learn the status vocabulary first, then use Tasks, Sites, Compliance and Documents to build context. When evidence is incomplete, the portal shows PARTIAL_EVIDENCE rather than filling the gap.</p></div><div className="grid gap-4 md:grid-cols-3"><div className="rounded-2xl bg-[#12362b] p-5 text-white"><p className="text-xs uppercase tracking-wider text-lime-200">01</p><h3 className="mt-8 font-semibold">Orient</h3><p className="mt-2 text-sm leading-6 text-emerald-50/70">Understand domains, workflows and status labels.</p></div><div className="rounded-2xl border border-emerald-950/10 bg-white p-5"><p className="text-xs uppercase tracking-wider text-emerald-700">02</p><h3 className="mt-8 font-semibold">Trace</h3><p className="mt-2 text-sm leading-6 text-slate-600">Open the evidence drawer on every knowledge card.</p></div><div className="rounded-2xl border border-amber-200 bg-amber-50 p-5"><p className="text-xs uppercase tracking-wider text-amber-800">03</p><h3 className="mt-8 font-semibold text-amber-950">Verify</h3><p className="mt-2 text-sm leading-6 text-amber-900">Review gaps and conflicts before acting.</p></div></div></div>}
