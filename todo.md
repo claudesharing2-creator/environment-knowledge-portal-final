@@ -213,3 +213,11 @@
 - [x] Perbaiki penyebab yang terbukti, bukan hanya menambah validasi data internal
 - [x] Uji ulang alur klik yang sama pada URL publik setelah deployment baru
 - [x] Push dan simpan checkpoint hanya setelah hasil browser sesuai
+
+## Bug Follow-up — Redirect ke Domain Root GitHub
+
+- [ ] Audit semua href, fallback 404, base path, dan konfigurasi Pages yang dapat mengarah ke domain root akun
+- [ ] Pastikan seluruh tautan aplikasi memakai project base `/environment-knowledge-portal-final/`
+- [ ] Tambahkan redirect root yang aman bila root akun memang menerima trafik
+- [ ] Deploy dan verifikasi URL Beranda serta URL materi aspek tanpa kehilangan project base
+- [ ] Push dan simpan checkpoint setelah redirect terverifikasi
